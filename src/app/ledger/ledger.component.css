@@ -1,0 +1,117 @@
+.ledger-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    /* background-color: #1976d2; */
+    /* color: white; */
+  }
+  
+  /* Search bar styling */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* .search-bar mat-icon {
+    color: white;
+  } */
+  
+  .search-bar input {
+    /* color: white; */
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(19, 1, 1);
+    width: 200px;
+  }
+  
+  /* User info styling */
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  /* .user-info mat-icon {
+    color: white;
+  } */
+  
+  .user-info span {
+    font-size: 16px;
+    /* color: white; */
+  }
+
+  .user-info:hover {
+    opacity: 0.8; /* Change opacity on hover for visual feedback */
+  }
+  
+
+  /* Cards Container */
+.cards-container {
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    gap: 16px; /* Space between cards */
+    /* max-width: 800px; Set a maximum width for the cards container */
+    width: 100%; /* Allow the container to use full width */
+    height: 7em;
+    padding: 16px;
+  }
+  
+  /* Card Styling */
+  .card {
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+    align-items: center; /* Align items vertically */
+    justify-content: flex-start; /* Start items from the left */
+    width: 300px; /* Width of the card */
+    padding: 16px;
+    background-color: #fff; /* Card background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for the card */
+    border-radius: 8px; /* Rounded corners */
+    transition: height 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Hover effect */
+.card:hover {
+    height: 120px; /* Increase height on hover */
+    transform: scale(1.05); /* Slightly scale up the card */
+  }
+  
+  /* Icon styling - aligned to the left */
+  .card-icon {
+    font-size: 48px; /* Size of the icon */
+    color: #1976d2; /* Icon color */
+    margin-right: 16px; /* Add space between the icon and the text */
+  }
+  
+  /* Text content aligned next to the icon */
+  .card-heading {
+    font-size: 18px; /* Heading font size */
+    margin: 0; /* Remove margin */
+    font-weight: bold;
+  }
+  
+  .card-value {
+    font-size: 16px; /* Value font size */
+    color: #666; /* Color for the value */
+    margin: 0;
+  }
+  
+  /* Use a flex column for text so heading and value are aligned vertically */
+  .card-content {
+    display: flex;
+    flex-direction: column; /* Stack heading and value vertically */
+  }
+  
+
+  table {
+    width: 100%; /* Full width */
+  }
+  
+  .mat-header-cell, .mat-cell {
+    padding: 16px; /* Padding for table cells */
+  }

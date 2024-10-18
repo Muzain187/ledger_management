@@ -1,0 +1,42 @@
+<mat-sidenav-container class="sidenav-container">
+    <!-- Sidenav -->
+    <mat-sidenav [mode]="'side'" [(opened)]="sidenavOpened" [class.expanded]="isExpanded" class="custom-sidenav">
+      <mat-toolbar>
+        <button mat-icon-button (click)="toggleSidenav()">
+          <mat-icon>{{ isExpanded ? 'close' : 'menu' }}</mat-icon>
+        </button>
+      </mat-toolbar>
+  
+      <mat-nav-list>
+        <!-- Dashboard -->
+        <a mat-list-item routerLink="/dashboard">
+          <mat-icon>dashboard</mat-icon>
+          <span *ngIf="isExpanded">Dashboard</span>
+        </a>
+  
+        <!-- User Management -->
+        <a mat-list-item routerLink="/user-management">
+          <mat-icon>people</mat-icon>
+          <span *ngIf="isExpanded">User Management</span>
+        </a>
+  
+        <!-- Ledger -->
+        <a mat-list-item routerLink="/ledger">
+          <mat-icon>book</mat-icon>
+          <span *ngIf="isExpanded">Ledger</span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <!-- Main content -->
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <span>Ledger Management</span>
+      </mat-toolbar>
+      <div class="content">
+        <!-- This is where the routed components will be displayed -->
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
